@@ -11,7 +11,6 @@
     "dataRegisters": "node ./models/data/registers.js",
     "dataProperties": "node ./models/data/properties.js",
     "getIds": "node ./models/data/getUserIds.js"
-  
   },
   "keywords": [],
   "author": "",

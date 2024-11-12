@@ -8,8 +8,6 @@ import not_found_handler from './middlewares/not_found_handler.js';
 import error_400 from './middlewares/error_400.js';
 import error_handler from './middlewares/error_hadler.js';
 
-
-
 const server = express();
 
 const PORT = process.env.PORT || 8080;

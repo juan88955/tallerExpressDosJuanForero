@@ -1,6 +1,6 @@
 import User from "../../models/User.js";
 
-let allUsers = async (req, res, next) => {
+let allUser = async (req, res, next) => {
     try {
         const users = await User.find();
         res.status(200).json({
@@ -24,4 +24,17 @@ let getUser = async (req, res, next) => {
     }
 };
 
-export { allUsers, getUser };
+
+let userById = async (req, res, next) => {
+    try {
+        const user = await User.findById(req.params.id);
+        res.status(200).json({
+            success: true,
+            response: user
+        });
+    } catch (error) {
+        next(error);
+    }
+};
+
+export { allUser, getUser, userById };

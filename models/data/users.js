@@ -4,84 +4,86 @@ import User from "../User.js";
 
 let users = [
     {
-        nombre: "Juan",
-        correo: "juan@gmail.com",
-        direccion: "Av. Juan",
-        telefono: 123456789,
-        contraseña: "Juan123",
-        online: true
+        name: "Juan",
+        email: "juan@gmail.com",
+        address: "Av. Juan",
+        phone: 123456789,
+        password: "K9$mP2#vL5nX8@",
+        online: false
     },
     {
-        nombre: "Pedro",
-        correo: "pedro@gmail.com",
-        direccion: "Av. Pedro",
-        telefono: 987654321,
-        contraseña: "Pedro123",
-        online: true
+        name: "Pedro",
+        email: "pedro@gmail.com",
+        address: "Av. Pedro",
+        phone: 987654321,
+        password: "Nh7$Bv9#mK4pL@",
+        online: false
     },
     {
-        nombre: "Carlos",
-        correo: "carlos@gmail.com",
-        direccion: "Av. Carlos",
-        telefono: 654321098,
-        contraseña: "Carlos123",
-        online: true
+        name: "Carlos",
+        email: "carlos@gmail.com",
+        address: "Av. Carlos",
+        phone: 654321098,
+        password: "Rx5$Zt8#Wy3qN@",
+        online: false
     },
     {
-        nombre: "Luis",
-        correo: "luis@gmail.com",
-        direccion: "Av. Luis",
-        telefono: 543210987,
-        contraseña: "Luis123",
-        online: true
+        name: "Luis",
+        email: "luis@gmail.com",
+        address: "Av. Luis",
+        phone: 543210987,
+        password: "Jm6$Hp4#Qd9cV@",
+        online: false
     },
     {
-        nombre: "Maria",
-        correo: "maria@gmail.com",
-        direccion: "Av. Maria",
-        telefono: 432109876,
-        contraseña: "Maria123",
-        online: true
+        name: "Maria",
+        email: "maria@gmail.com",
+        address: "Av. Maria",
+        phone: 432109876,
+        password: "Yt7$Fg5#Bn2xM@",
+        online: false
     },
     {
-        nombre: "Jose",
-        correo: "jose@gmail.com",
-        direccion: "Av. Jose",
-        telefono: 321098765,
-        contraseña: "Jose123",
-        online: true
+        name: "Jose",
+        email: "jose@gmail.com",
+        address: "Av. Jose",
+        phone: 321098765,
+        password: "Wd3$Uj8#Ik6tR@",
+        online: false
     },
     {
-        nombre: "Ana",
-        correo: "ana@gmail.com",
-        direccion: "Av. Ana",
-        telefono: 210987654,
-        contraseña: "Ana123",
-        online: true
+        name: "Ana",
+        email: "ana@gmail.com",
+        address: "Av. Ana",
+        phone: 210987654,
+        password: "Qz9$Xc4#Vm7hE@",
+        online: false
     },
     {
-        nombre: "Juan",
-        correo: "juan@gmail.com",
-        direccion: "Av. Juan",
-        telefono: 123456789,
-        contraseña: "Juan123",
-        online: true
+        name: "Roberto",
+        email: "roberto@gmail.com",
+        address: "Av. Roberto",
+        phone: 123498765,
+        password: "Ts2$Py7#Lk9mB@",
+        online: false
     },
     {
-        nombre: "Pedro",
-        correo: "pedro@gmail.com",
-        direccion: "Av. Pedro",
-        telefono: 987654321,
-        contraseña: "Pedro123",
-        online: true
+        name: "Miguel",
+        email: "miguel@gmail.com",
+        address: "Av. Miguel",
+        phone: 987612345,
+        password: "Hc8$Nw5#Vf3xD@",
+        online: false
     },
     {
-        nombre: "Carlos",
-        correo: "carlos@gmail.com",
-        direccion: "Av. Carlos",
-        telefono: 654321098,
-        contraseña: "Carlos123",
-        online: true
-    }];
+        name: "Sofia",
+        email: "sofia@gmail.com",
+        address: "Av. Sofia",
+        phone: 654389012,
+        password: "Ga4$Mt6#Bj1kR@",
+        online: false
+    }
+];
+
 
 User.insertMany(users)
