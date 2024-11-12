@@ -1,6 +1,7 @@
 import "dotenv/config.js";
 import "../../config/database.js";
 import User from "../User.js";
+import bcrypt from 'bcryptjs';
 
 let users = [
     {
@@ -85,5 +86,30 @@ let users = [
     }
 ];
 
+async function hashPassword(password) {
+    const salt = await bcrypt.genSalt(10);
+    return bcrypt.hash(password, salt);
+}
 
-User.insertMany(users)
+async function insertUsers() {
+    try {
+        const hashedUsers = await Promise.all(
+            users.map(async (user) => ({
+                ...user,
+                password: await hashPassword(user.password)
+            }))
+        );
+
+        await User.deleteMany({});
+
+        const insertedUsers = await User.insertMany(hashedUsers);
+
+        console.log(`${insertedUsers.length} usuarios creados exitosamente`);
+        process.exit(0);
+    } catch (error) {
+        console.error('Error al crear usuarios:', error);
+        process.exit(1);
+    }
+}
+
+insertUsers();
