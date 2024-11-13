@@ -9,8 +9,7 @@
     "dev": "nodemon ./server.js",
     "dataUsers": "node ./models/data/users.js",
     "dataRegisters": "node ./models/data/registers.js",
-    "dataProperties": "node ./models/data/properties.js",
-    "getIds": "node ./models/data/getUserIds.js"
+    "dataProperties": "node ./models/data/properties.js"
   },
   "keywords": [],
   "author": "",
