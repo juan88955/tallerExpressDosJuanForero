@@ -7,7 +7,6 @@ import passport from '../middlewares/passport.js';
 
 const propertyRouter = Router();
 
-// Todas las rutas protegidas con autenticación JWT
 propertyRouter.get('/all', passport.authenticate('jwt', { session: false }), allProperties);
 propertyRouter.post('/create', passport.authenticate('jwt', { session: false }), createProperty);
 propertyRouter.get('/id/:id', passport.authenticate('jwt', { session: false }), getProperty);

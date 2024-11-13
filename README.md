@@ -29,9 +29,6 @@ npm run dataUsers
 npm run dataRegisters
 npm run dataProperties
 
-# Obtener IDs de usuarios
-npm run getIds
-
 ## Endpoints
 
 ### Usuarios

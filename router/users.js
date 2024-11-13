@@ -12,10 +12,7 @@ import passport from "../middlewares/passport.js";
 
 const userRouter = Router();
 
-// Rutas públicas (sin autenticación)
 userRouter.post('/register', validator(schemaUsersCreated), accountExists, createHash, register)
-
-// Rutas protegidas (con autenticación)
 userRouter.get('/all', passport.authenticate('jwt', { session: false }), allUser)
 userRouter.get('/id/:id', passport.authenticate('jwt', { session: false }), userById)
 userRouter.put('/update', passport.authenticate('jwt', { session: false }), update)
