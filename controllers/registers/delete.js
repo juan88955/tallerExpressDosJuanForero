@@ -1,15 +1,24 @@
 import Register from "../../models/Register.js";
 
-let deleteRegister = async (req, res, next) => {
+let deleteRegister = async (req, res) => {
     try {
-        const register = await Register.findByIdAndDelete(req.params.id);
+        const { id } = req.params;
+        const deletedRegister = await Register.findByIdAndDelete(id);
+        if (!deletedRegister) {
+            return res.status(404).json({
+                success: false,
+                message: "Register not found"
+            });
+        }
         res.status(200).json({
             success: true,
-            response: register
+            message: "Register deleted",
+            register: deletedRegister
         });
-    } catch (error) {
+    }
+    catch (error) {
         next(error);
     }
-};
+}
 
 export default deleteRegister;

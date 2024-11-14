@@ -10,7 +10,7 @@ const registerRouter = Router();
 registerRouter.get('/all', passport.authenticate('jwt', { session: false }), allRegisters);
 registerRouter.get('/id/:id', passport.authenticate('jwt', { session: false }), getRegister);
 registerRouter.post('/create', passport.authenticate('jwt', { session: false }), createRegister);
-registerRouter.put('/update/:id', passport.authenticate('jwt', { session: false }), updateRegister);
+registerRouter.put('/update', passport.authenticate('jwt', { session: false }), updateRegister);
 registerRouter.delete('/delete/:id', passport.authenticate('jwt', { session: false }), deleteRegister);
 
 

@@ -5,7 +5,8 @@ let createProperty = async (req, res, next) => {
         const property = await Property.create(req.body);
         res.status(201).json({
             success: true,
-            response: property
+            response: property,
+            message: "Property created successfully"
         });
     } catch (error) {
         next(error);
