@@ -101,9 +101,7 @@ async function insertUsers() {
         );
 
         await User.deleteMany({});
-
         const insertedUsers = await User.insertMany(hashedUsers);
-
         console.log(`${insertedUsers.length} usuarios creados exitosamente`);
         process.exit(0);
     } catch (error) {
